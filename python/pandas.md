@@ -62,3 +62,44 @@ print(df)
 >>> 1        Good    5   37    17.0
 >>> 2      Strong   11   41    29.0
 ```
+
+
+## Wide DataFrame $\rightarrow$ Long DataFrame
+I was considering neighboring introgressed tracts per individual—i.e., two adjacent tracts—and wanted to sort all of the tracts in the DataFrame in descending order while keeping track (hahaha get it?) of the individual and tract ID. Unfortunately, I could not figure out a solution, but I did figure out the issue: my DataFrame was in a wide-format—i.e., one row per individual.
+
+```python
+# Import pandas.
+import pandas as pd
+
+# Intialize example data.
+wide_df = pd.DataFrame({
+    'IND': ['A', 'B', 'C'],
+    'TRACT_LENGTH_1': [100, 150, 120],
+    'TRACT_LENGTH_2': [200, 160, 100]
+})
+# Show the dataframe.
+print(wide_df)
+>>>   IND  TRACT_LENGTH_1  TRACT_LENGTH_2
+>>> 0   A             100             200
+>>> 1   B             150             160
+>>> 2   C             120             100
+```
+
+It is not obvious to me that there is a straightforward way to sort by tract length while retaining the tract's individual and the tract length ID (`_1` or `_2`). However, I later realized that this task would become trivial if I converted my DataFrame to long-format—i.e., one row per individual per tract.
+
+```python
+# Elongate and sort the dataframe in descending order.
+long_sorted_df = pd.melt(
+    wide_df, id_vars='IND', value_vars=['TRACT_LENGTH_1', 'TRACT_LENGTH_2'],
+    var_name='TRACT_LENGTH_ID', value_name='LENGTH',
+).sort_values(by='LENGTH', ascending=False).reset_index(drop=True)
+# Show the dataframe.
+print(long_sorted_df)
+>>>   IND TRACT_LENGTH_ID  LENGTH
+>>> 0   A  TRACT_LENGTH_2     200
+>>> 1   B  TRACT_LENGTH_2     160
+>>> 2   B  TRACT_LENGTH_1     150
+>>> 3   C  TRACT_LENGTH_1     120
+>>> 4   A  TRACT_LENGTH_1     100
+>>> 5   C  TRACT_LENGTH_2     100
+```
