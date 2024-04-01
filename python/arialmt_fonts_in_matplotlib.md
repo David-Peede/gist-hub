@@ -5,18 +5,18 @@ I always forget that Arial is not a default font in `matplotlib` and it takes a 
 
 ### Step 1. Acquire the Font Family
 
-`matplotlib` needs `.ttf` font files, which are not trivial to acquire. As a convience you can download the ArialMT font family from [here](https://github.com/David-Peede/gist-hub/blob/main/data/ArialMT.zip) by clicking on the download raw file icon, after which you will need to unzip it like so.
+`matplotlib` needs `.ttf` font files, which are not trivial to acquire. As a convenience, you can download the ArialMT font family from [here](https://github.com/David-Peede/gist-hub/blob/main/data/ArialMT.zip) by clicking on the download raw file icon. After that, you will need to unzip it.
 
 ```bash
 unzip ArialMT.zip
 ```
 
-If everything worked correctly you should now have a `ArialMT` directory.
+If everything worked correctly you should now have an `ArialMT` directory.
 
 
 ### Step 2. Find your  `matplotlib`  Font Directory
 
-You will need to find the directory  where `matplotlib`  store its fonts, here is how I did it. __NOTE:__ Your output will look different from mine.
+You will need to find the directory where `matplotlib` stores its fonts. Here is how I did it. __NOTE:__ Your output will look different from mine.
 
 ```python
 import matplotlib

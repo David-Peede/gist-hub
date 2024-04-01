@@ -6,7 +6,7 @@ A tasting menu of  `numpy` snippets that I can never seem to remember.
 I am often interested in determining the frequency of positions given a list of start and end positions, but my old approach of initializing an empty array, iterating through the start and end positions, generating all the positions in the interval using `np.aranage`, appending the empty array and then using `np.unique` to count all of the unique positions is quite inefficient. The solution—which at the time of writing this I thought was quite clever—is to simply initialize an array of zeros for every unique position and then iterate through the intervals and update the array for the positions found in that interval.
 
 ```python
-# Import packages.
+# Import the necessary package.
 import numpy as np
 
 ### Example Tracts ###
@@ -24,7 +24,7 @@ import numpy as np
 #  4       4
 #  5       4
 #  6       4
-#  7       5
+#  7       4
 #  8       3
 #  9       3
 # 10       3
@@ -57,7 +57,7 @@ print(pos_counts)
 The outputs can be efficiently plotted as a histogram like so.
 
 ```python
-# Import packages.
+# Import the necessary package.
 import matplotlib.pyplot as plt
 
 # Intialize the figure and axes.
