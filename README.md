@@ -1,2 +1,2 @@
-# gist-hub
-Random assortment of personal gists and one-liners that I can't seem to remember... 
+# Gist-Hub
+Random assortment of personal gists and random code snippets, that I can never seem to remember.
