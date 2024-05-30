@@ -1,16 +1,22 @@
 # Gist-Hub
 Random assortment of personal gists and random code snippets, that I can never seem to remember, but frequently need to remember.
 
+## [`bash`](https://github.com/David-Peede/gist-hub/tree/main/bash)  🖥️
+
+- [Miscellaneous one-liner gists](https://github.com/David-Peede/gist-hub/blob/main/bash/one-liners.md) ⚙️
+
+
+## [Maths](https://github.com/David-Peede/gist-hub/tree/main/maths) 🧮
+
+- [Project Euler Problems](https://github.com/David-Peede/gist-hub/blob/main/maths/project-euler.ipynb) 💯
+- [EOSP - Poisson Processes](https://github.com/David-Peede/gist-hub/blob/main/maths/eosp-ch2-poisson-processes.ipynb) 📈
+
+
 ## [`python`](https://github.com/David-Peede/gist-hub/tree/main/python) 🐍 
 
 - [How to get the ArialMT font family in `matplotlib`](https://github.com/David-Peede/gist-hub/blob/main/python/arialmt_fonts_in_matplotlib.md) 🅰️
 - [Miscellaneous `numpy` gists](https://github.com/David-Peede/gist-hub/blob/main/python/numpy.md) 🔢
 - [Miscellaneous `pandas` gists](https://github.com/David-Peede/gist-hub/blob/main/python/pandas.md) 🐼
-
-
-## [`bash`](https://github.com/David-Peede/gist-hub/tree/main/bash)  🖥️
-
-- [Miscellaneous one-liner gists](https://github.com/David-Peede/gist-hub/blob/main/bash/one-liners.md) ⚙️
 
 
 ## To-Do 📝
@@ -42,3 +48,5 @@ Random assortment of personal gists and random code snippets, that I can never s
 	- Probability review.
 	- DTMCs.
 	- CTMCs.
+	- Renewal Processes.
+	- Martingales. 
